@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Ubicación – Productos Lácteo Contreras Chávez</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700;900&family=Lato:wght@300;400;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+  <style>
+    :root {
+      --cream: #f9f7f2;
+      --mid-gray: #666;
+      --dark: #333;
+      --radius: 12px;
+      --shadow: 0 10px 30px rgba(0,0,0,0.1);
+      --warm-gray: #f0ede9;
+    }
+
+    #ubicacion { background:var(--cream); padding: 4rem 2rem; }
+
+    .location-wrap {
+      display:grid;
+      grid-template-columns:1fr 1.2fr;
+      gap:3rem;
+      align-items:start;
+      max-width: 1200px;
+      margin: 0 auto;
+    }
+
+    .location-info h2 { margin-bottom:.8rem; font-family: 'Playfair Display', serif; }
+    .location-info > p { color:var(--mid-gray); line-height:1.8; margin-bottom:1.8rem; }
+
+    .info-row {
+      display:flex; align-items:flex-start; gap:.8rem;
+      margin-bottom:1.2rem; font-size:.9rem;
+    }
+    .info-row .icon { font-size:1.4rem; flex-shrink:0; margin-top:2px; }
+    .info-row strong { display:block; color:var(--dark); margin-bottom:2px; }
+    .info-row span   { color:var(--mid-gray); line-height:1.6; }
+
+    /* ── MAPA OPTIMIZADO ─────────────────────── */
+    .map-container {
+      border-radius:var(--radius);
+      overflow:hidden;
+      box-shadow:var(--shadow);
+      line-height: 0; /* Elimina espacio extra inferior */
+    }
+
+    .map-container iframe {
+      width: 100%;
+      height: 480px;
+      border: 0;
+    }
+
+    @media(max-width:900px){
+      .location-wrap { grid-template-columns:1fr; }
+    }
+  </style>
+</head>
+<body>
+
+<div class="page-header" style="text-align: center; padding: 3rem 1rem;">
+  <h1>📍 Nuestra Ubicación</h1>
+  <p>Encuéntranos en el corazón de Valle de Juárez, Jalisco</p>
+</div>
+
+<section id="ubicacion">
+  <div class="location-wrap">
+
+    <div class="location-info">
+      <p class="section-label" style="text-transform: uppercase; font-weight: bold; color: #888; font-size: 0.8rem;">¿Dónde estamos?</p>
+      <h2 class="section-title">Visítanos en<br>Valle de Juárez</h2>
+      <p>Estamos en el corazón de Valle de Juárez, fácil de encontrar y siempre con las puertas abiertas para ti y tu familia.</p>
+
+      <div class="info-row">
+        <span class="icon">📍</span>
+        <div>
+          <strong>Dirección</strong>
+          <span>Calle San Felipe, Valle de Juárez, Jalisco</span>
+        </div>
+      </div>
+      <div class="info-row">
+        <span class="icon">🕗</span>
+        <div>
+          <strong>Horario</strong>
+          <span>Lunes – Sábado: 8:00 a.m. – 9:00 p.m.<br>Domingo: 9:00 a.m. – 3:00 p.m.</span>
+        </div>
+      </div>
+      <div class="info-row">
+        <span class="icon">📞</span>
+        <div>
+          <strong>Teléfono</strong>
+          <span>(374) 000-0000</span>
+        </div>
+      </div>
+      <div class="info-row">
+        <span class="icon">📱</span>
+        <div>
+          <strong>WhatsApp</strong>
+          <span>+52 374 000 0000</span>
+        </div>
+      </div>
+      <div class="info-row">
+        <span class="icon">📧</span>
+        <div>
+          <strong>Correo</strong>
+          <span>contacto@lacteoscontreras.mx</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="map-container">
+      <iframe 
+        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d788.4836604678475!2d-102.9582015439356!3d19.93782142437859!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x842f0671b535b04d%3A0xbf538bf8a79c02ad!2sSan%20Felipe%2C%20Jardines%20de%20la%20Providencia%2C%2049540%20Valle%20de%20Ju%C3%A1rez%2C%20Jal.!5e0!3m2!1ses-419!2smx!4v1773270792569!5m2!1ses-419!2smx" 
+        allowfullscreen="" 
+        loading="lazy" 
+        referrerpolicy="no-referrer-when-downgrade">
+      </iframe>
+    </div>
+
+  </div>
+</section>
+
+<script src="nav.js"></script>
+</body>
+</html>

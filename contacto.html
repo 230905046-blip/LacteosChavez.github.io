@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Contacto – Productos Lácteo Contreras Chávez</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700;900&family=Lato:wght@300;400;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+  <style>
+    #contacto { background:var(--warm-gray); }
+
+    .contact-grid {
+      display:grid;
+      grid-template-columns:1fr 1.4fr;
+      gap:3rem;
+      align-items:start;
+    }
+    .contact-aside h2 { margin-bottom:.8rem; }
+    .contact-aside > p { color:var(--mid-gray); line-height:1.8; margin-bottom:2rem; }
+
+    .info-row {
+      display:flex; align-items:flex-start; gap:.8rem;
+      margin-bottom:1.2rem; font-size:.9rem;
+    }
+    .info-row .icon { font-size:1.3rem; flex-shrink:0; margin-top:2px; }
+    .info-row strong { display:block; color:var(--dark); margin-bottom:2px; }
+    .info-row span   { color:var(--mid-gray); }
+
+    .social-links { display:flex; gap:1rem; flex-wrap:wrap; margin-top:1.5rem; }
+    .social-link {
+      display:flex; align-items:center; gap:.5rem;
+      background:var(--white); border:1px solid #e0d6cc;
+      border-radius:8px; padding:.5rem 1rem;
+      font-size:.82rem; font-weight:700;
+      transition:border-color .2s,color .2s;
+    }
+    .social-link:hover { border-color:var(--red); color:var(--red); }
+
+    /* Form */
+    .contact-form {
+      background:var(--white);
+      padding:2.5rem;
+      border-radius:var(--radius);
+      box-shadow:var(--shadow);
+    }
+    .form-row { display:grid; grid-template-columns:1fr 1fr; gap:1rem; }
+    .form-group { display:flex; flex-direction:column; gap:.4rem; margin-bottom:1.2rem; }
+    .form-group label {
+      font-size:.78rem; font-weight:700; letter-spacing:1px;
+      text-transform:uppercase; color:var(--mid-gray);
+    }
+    .form-group input,
+    .form-group textarea,
+    .form-group select {
+      border:1.5px solid #e0d6cc; border-radius:8px;
+      padding:.75rem 1rem;
+      font-family:'Lato',sans-serif; font-size:.9rem;
+      background:var(--cream); color:var(--dark);
+      transition:border-color .2s,box-shadow .2s; outline:none;
+    }
+    .form-group input:focus,
+    .form-group textarea:focus,
+    .form-group select:focus {
+      border-color:var(--red);
+      box-shadow:0 0 0 3px rgba(192,57,43,.12);
+    }
+    .form-group textarea { resize:vertical; min-height:120px; }
+    .btn-submit {
+      width:100%; background:var(--red); color:#fff; border:none;
+      padding:1rem; border-radius:8px;
+      font-family:'Lato',sans-serif; font-size:.95rem;
+      font-weight:700; letter-spacing:1px; text-transform:uppercase;
+      cursor:pointer; transition:background .25s,transform .2s;
+    }
+    .btn-submit:hover { background:var(--red-dark); transform:translateY(-1px); }
+
+    @media(max-width:900px){ .contact-grid{ grid-template-columns:1fr; } }
+    @media(max-width:640px){ .form-row{ grid-template-columns:1fr; } }
+  </style>
+</head>
+<body>
+
+<div class="page-header">
+  <h1>Contáctanos</h1>
+  <p>Estamos para servirte — escríbenos o visítanos en Valle de Juárez</p>
+</div>
+
+<section id="contacto">
+  <div class="contact-grid">
+
+    <!-- ASIDE INFO -->
+    <div class="contact-aside reveal">
+      <p class="section-label">Escríbenos</p>
+      <h2 class="section-title">¿En qué podemos<br>ayudarte?</h2>
+      <p>¿Tienes alguna pregunta, pedido especial o sugerencia? Mándanos un mensaje y te respondemos a la brevedad.</p>
+
+      <div class="info-row">
+        <span class="icon">📍</span>
+        <div>
+          <strong>Dirección</strong>
+          <span>Calle Principal s/n, Valle de Juárez, Jalisco</span>
+        </div>
+      </div>
+      <div class="info-row">
+        <span class="icon">📞</span>
+        <div>
+          <strong>Teléfono</strong>
+          <span>(374) 000-0000</span>
+        </div>
+      </div>
+      <div class="info-row">
+        <span class="icon">🕗</span>
+        <div>
+          <strong>Horario</strong>
+          <span>Lunes – Sábado: 8:00 a.m. – 9:00 p.m.<br>Domingo: 9:00 a.m. – 3:00 p.m.</span>
+        </div>
+      </div>
+
+      <div class="social-links">
+        <a href="#" class="social-link">📘 Facebook</a>
+        <a href="#" class="social-link">📱 WhatsApp</a>
+        <a href="#" class="social-link">📸 Instagram</a>
+      </div>
+    </div>
+
+    <!-- FORMULARIO -->
+    <div class="contact-form reveal">
+      <div class="form-row">
+        <div class="form-group">
+          <label>Nombre</label>
+          <input type="text" id="fname" placeholder="Tu nombre" />
+        </div>
+        <div class="form-group">
+          <label>Apellido</label>
+          <input type="text" id="lname" placeholder="Tu apellido" />
+        </div>
+      </div>
+      <div class="form-group">
+        <label>Correo electrónico</label>
+        <input type="email" id="email" placeholder="correo@ejemplo.com" />
+      </div>
+      <div class="form-group">
+        <label>Teléfono (opcional)</label>
+        <input type="tel" id="phone" placeholder="+52 374 000 0000" />
+      </div>
+      <div class="form-group">
+        <label>Asunto</label>
+        <select id="subject">
+          <option value="">Selecciona un asunto…</option>
+          <option>Consulta de producto</option>
+          <option>Pedido especial</option>
+          <option>Precios mayoreo</option>
+          <option>Sugerencia</option>
+          <option>Otro</option>
+        </select>
+      </div>
+      <div class="form-group">
+        <label>Mensaje</label>
+        <textarea id="message" placeholder="Escribe tu mensaje aquí…"></textarea>
+      </div>
+      <button class="btn-submit" onclick="submitForm()">Enviar mensaje ✉️</button>
+    </div>
+
+  </div>
+</section>
+
+<script src="nav.js"></script>
+<script>
+  function submitForm() {
+    const required = ['fname','lname','email','message'];
+    const empty = required.some(id => !document.getElementById(id).value.trim());
+    if (empty) { alert('Por favor completa todos los campos requeridos.'); return; }
+    const toast = document.getElementById('toast');
+    toast.classList.add('show');
+    setTimeout(() => toast.classList.remove('show'), 3500);
+    ['fname','lname','email','phone','subject','message'].forEach(id => {
+      document.getElementById(id).value = '';
+    });
+  }
+</script>
+</body>
+</html>

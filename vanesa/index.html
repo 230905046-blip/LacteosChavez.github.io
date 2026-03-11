@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Inicio – Productos Lácteo Contreras Chávez</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700;900&family=Lato:wght@300;400;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+  <style>
+    #inicio {
+      min-height:calc(100vh - var(--nav-h));
+      background:
+        linear-gradient(135deg,rgba(192,57,43,.82) 0%,rgba(44,26,14,.75) 100%),
+        url('https://images.unsplash.com/photo-1542838132-92c53300491e?q=80&w=1400') center/cover no-repeat;
+      display:flex; align-items:center;
+      padding:6rem 5%;
+      position:relative; overflow:hidden;
+    }
+    #inicio::after {
+      content:''; position:absolute;
+      bottom:-2px; left:0; right:0; height:80px;
+      background:var(--cream);
+      clip-path:ellipse(55% 100% at 50% 100%);
+    }
+    .hero-content { max-width:680px; animation:fadeUp .9s ease both; }
+    .hero-badge {
+      display:inline-block; background:var(--red-light); color:#fff;
+      font-size:.7rem; font-weight:700; letter-spacing:3px; text-transform:uppercase;
+      padding:.35rem .85rem; border-radius:30px; margin-bottom:1.2rem;
+    }
+    .hero-content h1 {
+      font-family:'Playfair Display',serif;
+      font-size:clamp(2.4rem,6vw,4.2rem); font-weight:900;
+      color:var(--white); line-height:1.1; margin-bottom:1.2rem;
+    }
+    .hero-content h1 em { color:#f9c74f; font-style:normal; }
+    .hero-content p {
+      font-size:1.05rem; font-weight:300; color:rgba(255,255,255,.88);
+      line-height:1.75; margin-bottom:2rem; max-width:520px;
+    }
+    .hero-cta {
+      display:inline-flex; align-items:center; gap:.6rem;
+      background:var(--white); color:var(--red);
+      font-weight:700; font-size:.9rem; letter-spacing:.5px;
+      padding:.85rem 2rem; border-radius:50px;
+      box-shadow:0 4px 20px rgba(0,0,0,.2);
+      transition:background .25s,color .25s,transform .2s;
+    }
+    .hero-cta:hover { background:var(--red); color:#fff; transform:translateY(-2px); }
+
+    .highlights {
+      background:var(--red); padding:2.5rem 5%;
+      display:grid; grid-template-columns:repeat(auto-fit,minmax(180px,1fr));
+      gap:1.5rem; text-align:center;
+    }
+    .hl-item { color:#fff; }
+    .hl-icon { font-size:2rem; margin-bottom:.4rem; }
+    .hl-num  { font-family:'Playfair Display',serif; font-size:2rem; font-weight:900; line-height:1; }
+    .hl-text { font-size:.78rem; letter-spacing:2px; text-transform:uppercase; opacity:.8; }
+
+    #preview { background:var(--warm-gray); }
+    .products-grid {
+      display:grid; grid-template-columns:repeat(auto-fit,minmax(240px,1fr)); gap:1.8rem;
+    }
+    .card {
+      background:var(--white); border-radius:var(--radius);
+      overflow:hidden; box-shadow:var(--shadow);
+      transition:transform .3s,box-shadow .3s;
+    }
+    .card:hover { transform:translateY(-6px); box-shadow:0 12px 36px rgba(44,26,14,.18); }
+    .card-img-wrap { height:200px; overflow:hidden; position:relative; }
+    .card-img-wrap img { height:100%; object-fit:cover; transition:transform .5s; }
+    .card:hover .card-img-wrap img { transform:scale(1.07); }
+    .card-tag {
+      position:absolute; top:.8rem; left:.8rem;
+      background:var(--red); color:#fff;
+      font-size:.65rem; font-weight:700; letter-spacing:2px;
+      text-transform:uppercase; padding:.3rem .7rem; border-radius:20px;
+    }
+    .card-body { padding:1.2rem 1.4rem 1.5rem; }
+    .card-body h3 {
+      font-family:'Playfair Display',serif; font-size:1.2rem;
+      font-weight:700; margin-bottom:.4rem; color:var(--dark);
+    }
+    .card-body p { font-size:.83rem; color:var(--mid-gray); line-height:1.6; }
+    .card-arrow {
+      display:inline-flex; align-items:center; gap:.3rem;
+      color:var(--red); font-size:.8rem; font-weight:700;
+      margin-top:.8rem; letter-spacing:.5px;
+    }
+    @media(max-width:640px){ .highlights{ grid-template-columns:1fr 1fr; } }
+  </style>
+</head>
+<body>
+
+<section id="inicio">
+  <div class="hero-content">
+    <span class="hero-badge">📍 Valle de Juárez, Jalisco</span>
+    <h1>Tu tienda de<br>confianza desde<br><em>siempre.</em></h1>
+    <p>En Productos Lácteo Contreras Chávez encontrarás todo lo que tu familia necesita — refrescos, abarrotes, vinos finos y quesos seleccionados — con el trato cálido y cercano que nos caracteriza en Valle de Juárez.</p>
+    <a href="productos.html" class="hero-cta">Ver productos &nbsp;→</a>
+  </div>
+</section>
+
+<div class="hero-content">
+  <img src="logo.png" alt="Descripción de la imagen">
+</div>
+
+<div class="highlights">
+  <div class="hl-item"><div class="hl-icon">🛒</div><div class="hl-num">+500</div><div class="hl-text">Productos</div></div>
+  <div class="hl-item"><div class="hl-icon">⭐</div><div class="hl-num">20+</div><div class="hl-text">Años de tradición</div></div>
+  <div class="hl-item"><div class="hl-icon">🤝</div><div class="hl-num">100%</div><div class="hl-text">Trato familiar</div></div>
+  <div class="hl-item"><div class="hl-icon">🕗</div><div class="hl-num">7/7</div><div class="hl-text">Todos los días</div></div>
+</div>
+
+<script src="nav.js"></script>
+</body>
+</html>
